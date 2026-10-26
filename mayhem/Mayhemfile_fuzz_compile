@@ -1,0 +1,10 @@
+project: savantenvs/gravity
+target: fuzz_compile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_compile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_compile
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/fuzz_compile/fuzz_compile.dict

@@ -1,0 +1,9 @@
+project: savantenvs/gravity
+target: gravity_run
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gravity_run/testsuite
+cmds:
+  - cmd: /mayhem/gravity -q @@
+    timeout: 5
+    dictionary: /mayhem/mayhem/gravity_run/gravity_run.dict
